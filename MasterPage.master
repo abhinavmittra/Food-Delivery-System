@@ -14,13 +14,13 @@
         Food Delivery Website <br />
         
         Phone: 011255413123<br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Logout</asp:HyperLink><br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Go To Login Page</asp:HyperLink><br />
         <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" ImageUrl="~/day_night.png" Height="50px" Width="50px"/>
-        
+        <br /><br /><br />
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">    
         
         </asp:ContentPlaceHolder><br/><br />
-        Footer
+        Thanks for Choosing us.
     </div>
     </form>
 </body>

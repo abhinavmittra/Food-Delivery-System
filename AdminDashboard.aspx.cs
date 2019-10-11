@@ -120,7 +120,7 @@ public partial class Default4 : System.Web.UI.Page
             string restname= row.Cells[1].Text;
             string commentText = row.Cells[2].Text;
             string username = row.Cells[0].Text;
-            //Label1.Text="INdex" + index.ToString() + restname + commentText + username;
+            
             string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
             string cmdInsertText = "update Restaurant set COMMENTS=COMMENTS+@comment where Name=@resname";
             string delText = "delete from Comments where Restaurantname=@rn and Username=@un and commentText=@ct";
@@ -139,7 +139,7 @@ public partial class Default4 : System.Web.UI.Page
                     cmd.Parameters.AddWithValue("@rn",restname);
                     cmd.Parameters.AddWithValue("@un",username);
                     cmd.Parameters.AddWithValue("@ct",commentText);
-                    //conn.Open();
+                    
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -153,7 +153,7 @@ public partial class Default4 : System.Web.UI.Page
             string commentText = row.Cells[2].Text;
             string username = row.Cells[0].Text;
             commentsGrid.Rows[index].Enabled = false;
-            //Label1.Text = "INdex" + index.ToString() + restname + commentText + username;
+            
             string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
             string delText = "delete from Comments where Restaurantname=@rn and Username=@un and commentText=@ct";
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -218,7 +218,7 @@ public partial class Default4 : System.Web.UI.Page
         }
         Session["Cuisine"] = cuisines;
         Session["Location"] = locations;
-        string queryUrl = "Default5.aspx?";
+        string queryUrl = "Report.aspx?";
         queryUrl += "rating=" + ratingList.SelectedValue;
         Response.Redirect(queryUrl);
     }

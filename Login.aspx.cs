@@ -44,15 +44,12 @@ public partial class _Default : System.Web.UI.Page
                 {
                     if (reader.Read())
                     {
-                        Response.Redirect("Default4.aspx");
-                        //Session["adminname"] = AdminID.Text;
-                        //Session["username"] = AdminID.Text;
-
-                        //Response.Redirect("Default3.aspx?username=" + Session["username"].ToString());
+                        Response.Redirect("AdminDashboard.aspx?user=admin");
+                        
                     }
                     else
                     {
-                        //Display Error msg;
+                        Error.Text = "User not Registered";
                     }
                 }
             }
@@ -80,13 +77,13 @@ public partial class _Default : System.Web.UI.Page
                     if (reader.Read())
                     {
                        
-                            Session["username"] = UserID.Text;
-                        Response.Redirect("Default3.aspx");
-                       // Response.Redirect("Default3.aspx?username="+Session["username"].ToString());
+                        Session["username"] = UserID.Text;
+                        Response.Redirect("UserDashboard.aspx");
+                       
                     }
                     else
                     {
-                        //Display Error msg;
+                        Error.Text = "User not Registered";
                     }
 
                 }

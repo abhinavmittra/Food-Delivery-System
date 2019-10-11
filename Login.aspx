@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     
@@ -35,7 +35,7 @@
         
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Div1"/>
         <br />
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default2.aspx">New User? Register!</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserReg.aspx">New User? Register!</asp:HyperLink>
         <br />
         <br />
         <br />
@@ -55,7 +55,7 @@
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label6" runat="server" Text="Admin ID: "></asp:Label> &nbsp; &nbsp;
+        <asp:Label ID="Label6" runat="server" Text="Admin ID: "></asp:Label> &nbsp; &nbsp;&nbsp; &nbsp;
         <asp:TextBox ID="AdminID" runat="server"></asp:TextBox><br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
         <asp:Label ID="Label7" runat="server" Text="Admin Password: "></asp:Label>&nbsp; &nbsp;

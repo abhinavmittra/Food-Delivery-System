@@ -40,21 +40,10 @@ public partial class Default2 : System.Web.UI.Page
                 cmd.ExecuteNonQuery();
                 
 
-                /*using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                   /* if (reader.Read())
-                    {
-                       // Labelmsg.Text = "Login successful";
-                    }
-                    else
-                    {
-                        //Labelmsg.Text = "Login failed";
-                    }
-                    
-                }
-                */
+                
             }
         }
+        regLabel.Text = "User Created Succesffuly.";
 
     }
 }
