@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -27,7 +28,7 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Abhinav\IT_PROJECT\FoodDelivery\Food.mdf;Integrated Security=True;Connect Timeout=30";
+        string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
         string authText = "select * from Users where Name=@uname and Password=@pass and Isadmin=1 ";
         using (SqlConnection conn = new SqlConnection(connStr))
         {
@@ -61,7 +62,7 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Abhinav\IT_PROJECT\FoodDelivery\Food.mdf;Integrated Security=True;Connect Timeout=30";
+        string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
         string authText = "select * from Users where Name=@uname and Password=@pass and Isadmin=0 ";
 
         using (SqlConnection conn = new SqlConnection(connStr))

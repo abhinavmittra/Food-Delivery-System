@@ -42,7 +42,7 @@ public partial class Default3 : System.Web.UI.Page
                 foreach(DataRow dr in ds.Tables[0].Rows)
                 {
                     ddlNames.Items.Add(dr["Name"].ToString());
-                        ddlComments.Items.Add(dr["Name"].ToString());
+                    ddlComments.Items.Add(dr["Name"].ToString());
                 }
                 }
 
@@ -69,7 +69,7 @@ public partial class Default3 : System.Web.UI.Page
         string[] names = { "Name","Cuisine","Location","RATING" };
         if (ddlFilter.SelectedIndex < 3)
         {
-            authText = "select * from Restaurant where " + names[ddlFilter.SelectedIndex] + "=" + "'" + nameFilter.Text + "'";
+            authText = "select * from Restaurant where " + names[ddlFilter.SelectedIndex]+" like" + "'" + nameFilter.Text + "%'";
             updateText = "update Restaurant set Views=Views+1 where " + names[ddlFilter.SelectedIndex] + "=" + "'" + nameFilter.Text + "'";
         }
         else

@@ -10,17 +10,17 @@
     <style type="text/css">
         .floatRight { float: right; }
     </style>
-    <asp:Panel ID="Panel1" runat="server" BorderStyle="Outset" Width="550px" CssClass="floatLeft">
-     <!--   <asp:Image ID="Image1" runat="server" ImageUrl="user.ico" Width="150px" Height="150px"/> -->
+    <asp:Panel ID="Panel1" runat="server" BorderStyle="Outset" Width="550px" CssClass="floatLeft"> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Text="User Login" Font-Size="55px" Font-Italic="true" Font-Bold="true" EnableTheming="false"></asp:Label>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br /><br /><br />
         <asp:Label ID="Label1" runat="server" Text="UserID: "></asp:Label>
         &nbsp; &nbsp;
         <asp:TextBox ID="UserID" runat="server"></asp:TextBox>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
         <asp:Label ID="Label2" runat="server" Text="Password: "></asp:Label>
         <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
 
@@ -41,19 +41,24 @@
         <br />
         <br /><br />
     </asp:Panel>
-    <br />
-    <asp:Panel ID="Panel2" runat="server" BorderStyle="Outset" Width="550px" CssClass="floatRight">
-       <!--> <asp:Image ID="Image2" runat="server" ImageUrl="admin.jpg" Width="150px" Height="150px"/>-->
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <asp:Panel ID="Panel2" runat="server" BorderStyle="Outset" Width="750px" CssClass="floatLeft">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Image ID="Image2" runat="server" ImageUrl="admin.jpg" Width="150px" Height="150px" CssClass="floatLeft"/>        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label5" runat="server" Text="Admin Login" Font-Size="55px" Font-Italic="true" Font-Bold="true" EnableTheming="false"></asp:Label>
         <br />
         <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <asp:Label ID="Label6" runat="server" Text="Admin ID: "></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label6" runat="server" Text="Admin ID: "></asp:Label> &nbsp; &nbsp;
         <asp:TextBox ID="AdminID" runat="server"></asp:TextBox><br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <asp:Label ID="Label7" runat="server" Text="Admin Password: "></asp:Label>
+        <asp:Label ID="Label7" runat="server" Text="Admin Password: "></asp:Label>&nbsp; &nbsp;
         <asp:TextBox ID="AdminPass" runat="server" TextMode="Password"></asp:TextBox>
         <br />
         <br />
@@ -65,7 +70,7 @@
         <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
         
         <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="Div2"/>
-        <%--<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AdminRegistration.aspx">New Admin? Register!</asp:HyperLink>--%>
+       
         <br />
         <br /><br />
     </asp:Panel>
