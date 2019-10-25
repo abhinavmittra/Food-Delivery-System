@@ -11,7 +11,9 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+	    MasterPage m = (MasterPage)Page.Master;
+            HyperLink hl = (HyperLink)m.FindControl("HyperLink1");
+            hl.Text = "";
     }
     protected void Page_PreInit(Object sender,EventArgs e)
     {
