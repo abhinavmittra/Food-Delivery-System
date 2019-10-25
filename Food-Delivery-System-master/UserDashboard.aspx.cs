@@ -13,6 +13,7 @@ public partial class Default3 : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
+        Label1.Text = "Welcome " + Session["username"];
         string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
         string authText = "select * from Restaurant";
 
@@ -107,7 +108,7 @@ public partial class Default3 : System.Web.UI.Page
     {
         string connStr = ConfigurationManager.ConnectionStrings["FoodDeliveryConnectionString"].ToString();
         
-        string authText = "update Restaurant set RATING=0.9*RATING+ @rate  where Name=@resname";
+        string authText = "update Restaurant set RATING=ROUND(0.9*RATING+ @rate,2)  where Name=@resname";
         using (SqlConnection conn = new SqlConnection(connStr))
         {
             using (SqlCommand cmd = new SqlCommand(authText, conn))
@@ -171,6 +172,7 @@ public partial class Default3 : System.Web.UI.Page
                 cmd.ExecuteNonQuery();
             }
         }
+        ddlComments.Items.Remove(ddlComments.SelectedValue);
 
     }
 }

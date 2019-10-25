@@ -15,6 +15,7 @@ public partial class Default4 : System.Web.UI.Page
     string authText = "select * from Restaurant";
     protected void Page_Load(object sender, EventArgs e)
     {
+        Label1.Text = "Welcome " + Session["username"];
         if (!IsPostBack)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -200,12 +201,13 @@ public partial class Default4 : System.Web.UI.Page
     {
         List<string> cuisines = new List<string>();
         List<string> locations = new List<string>();
-        
+        int clCount = 0, lCount = 0;
         for(int i = 0; i < cuisineList.Items.Count; i++)
         {
             if (cuisineList.Items[i].Selected)
             {
                 cuisines.Add(cuisineList.Items[i].Text);
+                clCount++;
             }
         }
         
@@ -213,13 +215,25 @@ public partial class Default4 : System.Web.UI.Page
         {
             if (locationList.Items[i].Selected)
             {
+                lCount++;
                 locations.Add(locationList.Items[i].Text);
             }
         }
-        Session["Cuisine"] = cuisines;
-        Session["Location"] = locations;
-        string queryUrl = "Report.aspx?";
-        queryUrl += "rating=" + ratingList.SelectedValue;
-        Response.Redirect(queryUrl);
+        if (clCount == 0)
+        {
+            validateCuisineFilter.Text = "Please Select atleast one cuisine ";
+        }
+        if (lCount == 0)
+        {
+            validateCuisineFilter.Text = "Please Select atleast one location";
+        }
+        if ((clCount!=0) && (lCount!=0))
+        {
+            Session["Cuisine"] = cuisines;
+            Session["Location"] = locations;
+            string queryUrl = "Report.aspx?";
+            queryUrl += "rating=" + ratingList.SelectedValue;
+            Response.Redirect(queryUrl);
+        }
     }
 }

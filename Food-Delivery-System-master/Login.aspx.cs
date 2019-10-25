@@ -14,18 +14,20 @@ public partial class _Default : System.Web.UI.Page
 	    MasterPage m = (MasterPage)Page.Master;
             HyperLink hl = (HyperLink)m.FindControl("HyperLink1");
             hl.Text = "";
+
     }
     protected void Page_PreInit(Object sender,EventArgs e)
     {
         HttpCookie cookie = Request.Cookies["Themes"];
         if (cookie == null)
         {
-            Page.Theme = "Day";
+            Page.Theme ="Day";
         }
         else
         {
             Page.Theme = cookie["Theme"];
         }
+        
     }
 
     protected void Button2_Click(object sender, EventArgs e)

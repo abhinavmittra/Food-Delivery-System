@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:Label ID="Label1" runat="server" Text="" Font-Size="Large"></asp:Label><br />
     CREATE RESTAURANT:
     <br /><br />
     NAME<asp:TextBox ID="nameText" runat="server"></asp:TextBox><br />
@@ -39,12 +40,18 @@
     <br /><br /><br />
     Cuisine: <asp:CheckBoxList ID="cuisineList" runat="server"></asp:CheckBoxList><br /><br />
     Location: <asp:CheckBoxList ID="locationList" runat="server"></asp:CheckBoxList><br /><br />
+    
     Rating: <asp:DropDownList ID="ratingList" runat="server">
+        <asp:ListItem>0</asp:ListItem>
         <asp:ListItem>1</asp:ListItem>
         <asp:ListItem>2</asp:ListItem>
         <asp:ListItem>3</asp:ListItem>
         <asp:ListItem>4</asp:ListItem>
         <asp:ListItem>5</asp:ListItem>
             </asp:DropDownList>
-    <asp:Button ID="btnReport" OnClick="btnReport_Click" runat="server" Text="Generate" /> 
+    <asp:Button ID="btnReport" OnClick="btnReport_Click" runat="server" Text="Generate" /><br />
+    <asp:Label ID="validateCuisineFilter" runat="server" Text=""></asp:Label><br />
+    <asp:Label ID="validateLocationFilter" runat="server" Text=""></asp:Label>
+
+
 </asp:Content>

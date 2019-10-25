@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   
+   <br />
+    <asp:Label ID="Label1" runat="server" Text="" Font-Size="Large"></asp:Label><br /><br />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Name">
                 <Columns>
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
